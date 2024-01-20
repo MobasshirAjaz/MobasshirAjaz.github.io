@@ -6,6 +6,8 @@ navToggle[0].addEventListener("click", function () {
 });
 
 
+/*Form Submission Code */
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzxxV-1Mk5of1CwN5snsHeERL9vTIH4WQDqpMWnW9539oa4hggVThC-p9Cto-yhkj8y4g/exec'
   const form = document.forms['submit-to-google-sheet']
 
@@ -15,3 +17,5 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzxxV-1Mk5of1CwN5snsH
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
+
+  /*Form Submission Code */
