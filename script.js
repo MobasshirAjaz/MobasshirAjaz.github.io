@@ -23,4 +23,30 @@ form.addEventListener('submit', e => {
 
 const isMobile = window.matchMedia("screen and (min-width: 1024px)").matches;
 
+if(!isMobile){
+  console.log("Mobile");
+  const project_cards=document.getElementsByClassName("project_card");
+  let isOpen=new Array(project_cards.length).fill(0);
 
+  for(let i=0;i<project_cards.length;i++){
+    project_cards[i].addEventListener("click",()=>{
+      if(isOpen[i]){
+        const headings = project_cards[i].querySelector(".card_headings");
+        const hidden = project_cards[i].querySelector(".card_hidden");
+  
+        headings.style.display="flex";
+        hidden.style.display="none";
+        isOpen[i]=0;
+      }
+      else{
+        const headings = project_cards[i].querySelector(".card_headings");
+        const hidden = project_cards[i].querySelector(".card_hidden");
+  
+        console.log("Headings=",headings);
+        headings.style.display="none";
+        hidden.style.display="flex";
+        isOpen[i]=1;
+      }
+    })
+  }
+}
