@@ -50,3 +50,14 @@ if(!isMobile){
     })
   }
 }
+else{
+  const hidden=document.querySelectorAll(".card_hidden");
+
+  for(card of hidden){
+    card.addEventListener("click",()=>{
+      const url=card.querySelector("a");
+      window.open(url.href, '_blank').focus();
+    })
+  }
+}
+

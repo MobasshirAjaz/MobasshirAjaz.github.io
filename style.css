@@ -536,34 +536,54 @@ body{
     .project_card{
         width: 20%;
         height: 10rem;
-        border: rgb(143, 254, 222) 3px solid;
-        background-color: rgb(10, 19, 36);
+    }
+
+    .card_headings{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(143, 254, 222);
+        align-items: center;
         justify-content: center;
     }
 
-    .project_card:hover{
-        background-color: rgb(143, 254, 222);
-
+    .card_headings h3{
+        font-family: "DM Mono";
+       font-size: 1.5rem;
+       text-align: center;
     }
 
-    .project_card:hover h3{
-        color: rgb(10, 19, 36);
-        
+    .card_headings i{
+        display: none;
     }
 
-    .project_card h3{
+    .card_headings:hover{
+        background-color: rgb(10, 19, 36); ;
+    }
+
+
+    .project_card:hover .card_hidden{
+        display: flex;
+        min-height: 10rem;
+        border: 3px rgb(143, 254, 222) solid;
+        cursor: pointer;
+        justify-content: center;
+    }
+    .project_card:hover .card_hidden p{
         font-size: 1rem;
+        font-family: "DM Mono";
+    }
+
+    .project_card:hover .card_hidden a{
+        display: none;
+    }
+    .project_card:hover .card_headings{
+        display: none;
+    }
+    .card_hidden:hover p{
         color: rgb(143, 254, 222);
         text-align: center;
-        
-    }
-    
-    .project_card i{
-       display: none;
     }
 
-
-    
     #contact_section{
         padding-left: 11vw;
         padding-right: 11.5vw;
