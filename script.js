@@ -53,11 +53,13 @@ if(!isMobile){
 else{
   const hidden=document.querySelectorAll(".card_hidden");
 
-  for(card of hidden){
+  hidden.forEach((card)=>{
     card.addEventListener("click",()=>{
-      const url=card.querySelector("a");
+      let url=card.querySelector("a");
+      console.log(url);
+      console.log(url.href);
       window.open(url.href, '_blank').focus();
-    })
+    })})
   }
-}
+
 

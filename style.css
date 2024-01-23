@@ -683,9 +683,7 @@ body{
     .project_card{
         width: 15%;
         height: 10rem;
-        border: rgb(143, 254, 222) 3px solid;
-        background-color: rgb(10, 19, 36);
-        justify-content: center;
+        
     }
 
     .welcomesection p{
