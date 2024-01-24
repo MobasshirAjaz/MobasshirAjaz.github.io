@@ -75,13 +75,12 @@ body{
 
 .welcomesection h1 .orangefullstop{
     color: #ff6856;
-    font-family: serif;
+    font-family: "serif";
 }
 
 .welcomesection p{
-    font-size: 3rem;
     color: white;
-    font-family: "DM Mono";
+    font-family: sans-serif;
     margin-top: 4rem;
     line-height: 5rem;
     word-spacing: 0.4;
