@@ -80,7 +80,8 @@ body{
 
 .welcomesection p{
     color: white;
-    font-family: sans-serif;
+    font-family: "DM Mono";
+    font-size: 3rem;
     margin-top: 4rem;
     line-height: 5rem;
     word-spacing: 0.4;
