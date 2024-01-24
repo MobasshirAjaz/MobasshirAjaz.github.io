@@ -79,6 +79,7 @@ body{
 }
 
 .welcomesection p{
+    font-size: 3rem;
     color: white;
     font-family: "DM Mono";
     margin-top: 4rem;
