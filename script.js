@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+
 const navToggle = document.getElementsByClassName("fa-bars");
 const navMenu = document.getElementsByClassName("navmenu");
 
@@ -10,12 +12,16 @@ navToggle[0].addEventListener("click", function () {
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzxxV-1Mk5of1CwN5snsHeERL9vTIH4WQDqpMWnW9539oa4hggVThC-p9Cto-yhkj8y4g/exec'
 const form = document.forms['submit-to-google-sheet']
-
+const submitbutton= document.getElementById("send_button");
 form.addEventListener('submit', e => {
+  submitbutton.disabled=true;
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
+    .then(response => {console.log('Success!', response)
+    form.reset();
+    alert("Your response has been recorded. I will get back to you soon. Thank you for reaching out to me.") })
+    .catch(error => {console.error('Error!', error.message)
+    alert("There was an error in submitting the form. Please try again later.")})
 })
 
 /*Form Submission Code */
@@ -62,4 +68,4 @@ else{
     })})
   }
 
-
+});
